@@ -42,6 +42,7 @@ interface PropsType  {
 type ParamsType = ParsedUrlQuery & {
     params: { id: string }
 };
+// @ts-ignore
 export const getStaticProps: GetStaticProps<PropsType, ParamsType> = async (context: GetStaticPropsContext) => {
   const { id } = context.params as IParams;
   const GET_SINGLE_POST = graphql(`
